@@ -1,7 +1,6 @@
 ## Planificació del projecte (Gantt)
 
-```
-mermaid
+```mermaid
 gantt
   title Planificació del projecte
   dateFormat 2026-04-20
