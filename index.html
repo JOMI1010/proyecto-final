@@ -2,95 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mapa de Emergencia Barcelona</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-    }
-
-    header {
-      background: #c62828;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 22px;
-    }
-
-    #map {
-      height: 90vh;
-      width: 100%;
-    }
-
-    .legend {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background: white;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .legend div {
-      margin-bottom: 5px;
-    }
-
-    .red { color: red; }
-  </style>
+  <title>Civil Point</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-  Mapa de Zonas Conflictivas - Botones de Emergencia
-</header>
+  <!-- NAVBAR -->
+  <nav class="menu-superior">
+    <div class="nombre-web">CIVIL <span>POINT</span></div>
 
-<div id="map"></div>
+    <ul class="enlaces-nav">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#proyecto">Proyecto</a></li>
+      <li><a href="#monitoreo">Alertas</a></li>
+      <li><a href="#tecnico">Botones</a></li>
+    </ul>
+  </nav>
 
-<div class="legend">
-  <div><span class="red">●</span> Zona conflictiva</div>
-</div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="contenedor">
 
-<script>
-  function initMap() {
-    const barcelona = { lat: 41.3851, lng: 2.1734 };
+    <!-- MENÚ LATERAL -->
+    <div class="menu">
+      <h2>Barcelona</h2>
 
-    // Aquí definimos el mapa base (fondo)
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 13,
-      center: barcelona,
-      mapTypeId: "roadmap" // opciones: roadmap, satellite, hybrid, terrain
-    });
+      <div class="calle" data-zona="rambla">La Rambla</div>
+      <div class="calle" data-zona="passeigdegracia">Passeig de Gràcia</div>
+      <div class="calle" data-zona="diagonal">Avinguda Diagonal</div>
+      <div class="calle" data-zona="raval">El Raval</div>
+      <div class="calle" data-zona="gotico">Barrio Gótico</div>
+      <div class="calle" data-zona="born">El Born</div>
+      <div class="calle" data-zona="barceloneta">Barceloneta</div>
+      <div class="calle" data-zona="sagrada">Sagrada Familia</div>
+      <div class="calle" data-zona="gracia">Gràcia</div>
+      <div class="calle" data-zona="sants">Sants</div>
+      <div class="calle" data-zona="lescorts">Les Corts</div>
+      <div class="calle" data-zona="poblenou">Poblenou</div>
+      <div class="calle" data-zona="santmarti">Sant Martí</div>
+      <div class="calle" data-zona="montjuic">Montjuïc</div>
+    </div>
 
-    const zonasConflictivas = [
-      { lat: 41.3809, lng: 2.1735, title: "Raval" },
-      { lat: 41.3927, lng: 2.1630, title: "Eixample" },
-      { lat: 41.4036, lng: 2.1744, title: "Sagrada Familia" }
-    ];
+    <!-- MAPA -->
+    <div class="mapa"></div>
 
-    zonasConflictivas.forEach(zona => {
-      const marker = new google.maps.Marker({
-        position: zona,
-        map: map,
-        title: zona.title,
-        icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
-      });
+  </div>
 
-      const info = new google.maps.InfoWindow({
-        content: `<b>${zona.title}</b><br>Botón de emergencia instalado`
-      });
+  <!-- MODAL -->
+  <div class="fondo-modal oculto" id="fondo"></div>
 
-      marker.addListener("click", () => {
-        info.open(map, marker);
-      });
-    });
-  }
-</script>
+  <div class="info oculto" id="panelInfo">
+    <button id="cerrar">✖</button>
+    <div id="contenido"></div>
+  </div>
 
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap">
-</script>
+  <script src="script.js"></script>
 
 </body>
 </html>
