@@ -13,47 +13,43 @@
     <div class="nombre-web">CIVIL <span>POINT</span></div>
 
     <ul class="enlaces-nav">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#proyecto">Proyecto</a></li>
-      <li><a href="#monitoreo">Alertas</a></li>
-      <li><a href="#tecnico">Botones</a></li>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../">Tienda</a></li>
     </ul>
   </nav>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="contenedor">
+  <!-- PRODUCTO -->
+  <div class="producto-container">
 
-    <!-- MENÚ LATERAL -->
-    <div class="menu">
-      <h2>Barcelona</h2>
+    <!-- IMÁGENES -->
+    <div class="imagenes">
+      <img id="imgPrincipal" src="https://via.placeholder.com/400x400">
 
-      <div class="calle" data-zona="rambla">La Rambla</div>
-      <div class="calle" data-zona="passeigdegracia">Passeig de Gràcia</div>
-      <div class="calle" data-zona="diagonal">Avinguda Diagonal</div>
-      <div class="calle" data-zona="raval">El Raval</div>
-      <div class="calle" data-zona="gotico">Barrio Gótico</div>
-      <div class="calle" data-zona="born">El Born</div>
-      <div class="calle" data-zona="barceloneta">Barceloneta</div>
-      <div class="calle" data-zona="sagrada">Sagrada Familia</div>
-      <div class="calle" data-zona="gracia">Gràcia</div>
-      <div class="calle" data-zona="sants">Sants</div>
-      <div class="calle" data-zona="lescorts">Les Corts</div>
-      <div class="calle" data-zona="poblenou">Poblenou</div>
-      <div class="calle" data-zona="santmarti">Sant Martí</div>
-      <div class="calle" data-zona="montjuic">Montjuïc</div>
+      <div class="miniaturas">
+        <img src="https://via.placeholder.com/100" onclick="cambiarImg(this)">
+        <img src="https://via.placeholder.com/100" onclick="cambiarImg(this)">
+        <img src="https://via.placeholder.com/100" onclick="cambiarImg(this)">
+      </div>
     </div>
 
-    <!-- MAPA -->
-    <div class="mapa"></div>
+    <!-- INFO -->
+    <div class="info-producto">
+      <h1>Botón de Emergencia Civil Point</h1>
 
-  </div>
+      <p class="precio">59,99€</p>
 
-  <!-- MODAL -->
-  <div class="fondo-modal oculto" id="fondo"></div>
+      <p class="descripcion">
+        Dispositivo inteligente diseñado para alertar a servicios de emergencia en zonas urbanas.
+        Instalación rápida y sistema de respuesta inmediata.
+      </p>
 
-  <div class="info oculto" id="panelInfo">
-    <button id="cerrar">✖</button>
-    <div id="contenido"></div>
+      <p class="stock">✔ En stock</p>
+
+      <button class="btn-comprar">Añadir al carrito</button>
+      <button class="btn-comprar ahora">Comprar ahora</button>
+
+    </div>
+
   </div>
 
   <script src="script.js"></script>
