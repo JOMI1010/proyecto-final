@@ -1,0 +1,243 @@
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+.bloque-info {
+  margin: 0 30px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    border-radius: 30px;
+}
+
+.cuadro{
+  background-color: #e2e2e2;
+}
+
+.centro {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-superior {
+    background: #000e5a;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nombre-web {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nombre-web span {
+    color: #ffd814;
+}
+
+.enlaces-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.enlaces-nav li a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: 0.3s; 
+}
+
+.enlaces-nav li a:hover {
+    background-color: #ff8800;
+    transform: scale(1.2);
+}
+
+.portada {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #151d4d), url("images/punto.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.portada h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.enlaces {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-accion {
+    background: #ffd814;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block; 
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    border: 0px;
+}
+
+.boton-accion:hover {
+    background-color: #ff8800;
+    transform: scale(1.1);
+}
+
+.seccion-padding {
+    padding: 20px 0;
+}
+
+.fondo-oscuro {
+    background: #151d4d;
+    color: #fff;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.separador {
+    width: 50px;
+    height: 5px;
+    background: #ffd814;
+    border: none;
+    margin: 0 auto 30px;
+}
+
+.caja-tabla {
+    background: #00000075;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-datos th, .tabla-datos td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.tabla-datos th {
+    color: #ffd814;
+}
+
+.etiqueta-estado {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.conectado { background: #27ae60; color: white; }
+
+.desconectado { background: #7f8c8d; color: white; }
+
+.error-critico {
+    background: #e73c3c;
+    color: white;
+    animation: parpadeo 1s infinite;
+}
+
+.rejilla-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-stat {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tarjeta-stat img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contenido-portada {
+    max-width: 800px;
+}
+
+.rejilla-texto {
+    display: grid;
+}
+
+.boton{
+  color: #ffd814;
+  background-color: #ffd814;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.tarjeta-stat {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarjeta-stat:hover {
+    transform: scale(1.05);
+}
+
+/* CONTENIDO OCULTO */
+.info-extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* CUANDO ESTÁ ABIERTA */
+.tarjeta-stat.activa .info-extra {
+    max-height: 250px;
+    margin-top: 10px;
+}
