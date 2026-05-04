@@ -1,118 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Civil Point</title>
+    <title>Civil Point | Seguridad Urbana</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" src="images/logo.png" />
-</head>
-<body>
+  </head>
+  <body>
     <nav class="menu-superior">
-        <div class="nombre-web">CIVIL <span> POINT</span></div>
-        <ul class="enlaces-nav">
-            <li><a href="#inicio" class="boton">Inicio</a></li>
-            <li><a href="#proyecto" class="boton">Proyecto</a></li>
-            <li><a href="#tecnico" class="boton">Botones</a></li>
-            <li><a href="#monitoreo" class="boton">Alertas</a></li>
-        </ul>
+      <div class="nombre-web">CIVIL<span>POINT</span></div>
+      <ul class="enlaces-navegacion">
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#proyecto">PROYECTO</a></li>
+        <li><a href="#tecnico">BOTONES</a></li>
+        <li><a href="#monitoreo" class="nav-destacado">ALERTAS</a></li>
+      </ul>
     </nav>
 
     <header id="inicio" class="portada">
-        <div class="contenido-portada">
-            <h1>CIVIL POINT</h1>
+      <div class="contenido-portada">
+        <h1>CIVIL POINT</h1>
+        <p>
+          Innovación tecnológica para una ciudad más segura. Geolocalización SOS
+          en tiempo real.
+        </p>
+        <div class="botones-principales">
+          <a href="mapa/index.html" class="boton-accion"
+            >Ver Mapa Interactivo</a
+          >
+          <a href="tienda/tienda.html" class="boton-accion">Explorar Tienda</a>
         </div>
+      </div>
     </header>
 
-    <section id="proyecto" class="seccion-padding">
-        <div class="contenedor cuadro centro">
-            <div class="rejilla-texto">
-                <a href="mapa/index.html" class="boton-accion">Ver Mapa</a>
-                <a href="tienda/tienda.html" class="boton-accion">Abrir Tienda</a>
-            </div>
+    <section id="proyecto" class="seccion-relleno">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">¿Qué es Civil Point?</h2>
+        <div class="separador"></div>
+        <div class="cuadricula-tarjetas">
+          <div class="tarjeta-informacion">
+            <h3>¿En qué consiste?</h3>
+            <p>
+              Red de botones SOS con señal de geolocalización constante para
+              alertar instantáneamente a las autoridades.
+            </p>
+          </div>
+          <div class="tarjeta-informacion">
+            <h3>Nuestros Modelos</h3>
+            <p>
+              Terminales de pared para estaciones de transporte y tótems estilo
+              torre para espacios abiertos.
+            </p>
+          </div>
+          <div class="tarjeta-informacion">
+            <h3>Ubicaciones Estratégicas</h3>
+            <p>
+              15 puntos críticos en zonas turísticas como La Rambla y el Barrio
+              Gótico.
+            </p>
+          </div>
+          <div class="tarjeta-informacion">
+            <h3>Modelo Freemium</h3>
+            <p>
+              Acceso gratuito en vía pública y servicios premium de
+              geolocalización privada.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="seccion-padding">
-        <div class="contenedor cuadro">
-            <h2>¿Qué es Civil Point?</h2>
-            <hr class="separador" />
-            <div class="rejilla-texto">
-                <div class="bloque-info">
-                    <h3>¿En qué consiste?</h3>
-                    <p>Botones SOS con geolocalización para alertar a autoridades.</p>
-                </div>
-                <div class="bloque-info">
-                    <h3>¿Qué botones tenemos?</h3>
-                    <p>Dos instalados (pared y torre) y uno en desarrollo.</p>
-                </div>
-                <div class="bloque-info">
-                    <h3>-Ubicaciones-</h3>
-                    <p>Distribuidos en zonas clave como Rambla o Barrio Gótico.</p>
-                </div>
-                <div class="bloque-info">
-                    <h3>¿Precio?</h3>
-                    <p>Servicio público gratuito + versión privada premium.</p>
-                </div>
+    <section id="tecnico" class="seccion-relleno fondo-gris">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Prototipos de Botón</h2>
+
+        <div class="rejilla-stats">
+          <div class="tarjeta-stat" onclick="toggleInfo(this)">
+            <h4>Terminal Modo Torre (INSTALADOS)</h4>
+            <img src="images/boton-pie.png" />
+            <div class="info-extra">
+              <p>
+                <strong>INFO:</strong> Nuestros Terminales Modo Torre ya son una
+                realidad en las principales avenidas. Diseñados para ser
+                visibles y accesibles, ofrecen asistencia inmediata a cualquier
+                ciudadano con solo pulsar un botón.
+              </p>
+              <p>
+                <strong>SEGURIDAD:</strong> Tu seguridad, siempre a la vista. El
+                Terminal Modo Torre garantiza una conexión directa con los
+                servicios de emergencia en espacios públicos abiertos.
+              </p>
             </div>
+          </div>
+
+          <div class="tarjeta-stat" onclick="toggleInfo(this)">
+            <h4>Terminal Modo Pared (INSTALADOS)</h4>
+            <img src="images/boton-pared.png" />
+            <div class="info-extra">
+              <p>
+                <strong>INFO:</strong> Optimizamos el espacio urbano con los
+                Terminales Modo Pared. Instalados estratégicamente en fachadas,
+                ofrecen una respuesta rápida sin interrumpir el paso peatonal.
+              </p>
+              <p>
+                <strong>SEGURIDAD:</strong> Protección en cada esquina.
+                Cobertura total en zonas de alta afluencia.
+              </p>
+            </div>
+          </div>
+
+          <div class="tarjeta-stat" onclick="toggleInfo(this)">
+            <h4>Terminal De Mano (PRÓXIMAMENTE)</h4>
+            <img src="images/boton-mano.png" />
+            <div class="info-extra">
+              <p>
+                <strong>INFO:</strong> La seguridad te acompaña allá donde
+                vayas. Dispositivo portátil de emergencia.
+              </p>
+              <p>
+                <strong>SEGURIDAD:</strong> Innovación en la palma de tu mano
+                para asistencia inmediata.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="tecnico" class="seccion-padding">
-        <div class="contenedor">
-            <h2>Prototipos de Botón</h2>
-            <div class="rejilla-stats">
-
-                <div class="tarjeta-stat" onclick="toggleInfo(this)">
-                    <h4>Terminal Modo Torre (INSTALADOS)</h4>
-                    <img src="images/boton-pie.png" />
-                    <div class="info-extra">
-                        <p><Strong>INFO:</strong>Nuestros Terminales Modo Torre ya son una realidad en las principales avenidas. Diseñados para ser visibles y accesibles, ofrecen asistencia inmediata a cualquier ciudadano con solo pulsar un botón</p>
-                        <p><strong>SEGURIDAD:</strong>Tu seguridad, siempre a la vista. El Terminal Modo Torre garantiza una conexión directa con los servicios de emergencia en espacios públicos abiertos, reforzando la protección en nuestras calles</p>
-                    </div>
-                </div>
-
-                <div class="tarjeta-stat" onclick="toggleInfo(this)">
-                    <h4>Terminal Modo Pared (INSTALADOS)</h4>
-                    <img src="images/boton-pared.png" />
-                    <div class="info-extra">
-                        <p><Strong>INFO:</strong>Optimizamos el espacio urbano con los Terminales Modo Pared. Instalados estratégicamente en fachadas, estos puntos de auxilio ofrecen una respuesta rápida sin interrumpir el paso peatonal</p>
-                        <p><strong>SEGURIDAD:</strong>Protección en cada esquina. Los dispositivos de pared permiten una cobertura total en el casco histórico y zonas de alta afluencia, asegurando que la ayuda esté siempre al alcance de la mano</p>
-                    </div>
-                </div>
-
-                <div class="tarjeta-stat" onclick="toggleInfo(this)">
-                    <h4>Terminal De Mano (PRÓXIMAMENTE)</h4>
-                    <img src="images/boton-mano.png" />
-                    <div class="info-extra">
-                        <p><Strong>INFO:</strong>La seguridad te acompaña allá donde vayas. Muy pronto lanzaremos el nuevo Terminal de Mano: potencia de auxilio compacta que cabe en tu bolsillo o como llavero</p>
-                        <p><strong>SEGURIDAD:</strong>Innovación en la palma de tu mano. Estamos desarrollando el dispositivo de emergencia personal más avanzado, para que la tranquilidad no dependa de dónde te encuentres</p>
-                    </div>
-                </div>
-
-            </div>
+    <section id="monitoreo" class="seccion-relleno fondo-oscuro">
+      <div class="contenedor">
+        <h2>Panel en Tiempo Real</h2>
+        <div class="caja-tabla">
+          <table class="tabla-datos">
+            <thead>
+              <tr>
+                <th>ID Nodo</th>
+                <th>Ubicación</th>
+                <th>Estado</th>
+                <th>Actualización</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-cuerpo"></tbody>
+          </table>
         </div>
-    </section>
-
-    <section id="monitoreo" class="seccion-padding fondo-oscuro">
-        <div class="contenedor">
-            <h2>Panel en Tiempo Real</h2>
-            <div class="caja-tabla">
-                <table class="tabla-datos">
-                    <thead>
-                        <tr>
-                            <th>ID Nodo</th>
-                            <th>Ubicación</th>
-                            <th>Estado</th>
-                            <th>Actualización</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabla-cuerpo"></tbody>
-                </table>
-            </div>
-        </div>
+      </div>
     </section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

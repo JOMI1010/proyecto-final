@@ -1,3 +1,10 @@
+:root {
+    --azul-oscuro: #0B132B;
+    --amarillo-pro: #FFC107;
+    --blanco: #ffffff;
+    --gris-claro: #f4f4f4;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +13,7 @@ body {
 
 /* NAVBAR */
 .menu-superior {
-  background: #151d4d;
+  background: var(--azul-oscuro);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -27,33 +34,28 @@ body {
 }
 
 .enlaces-nav {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.enlaces-nav li {
-  margin-left: 10px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .enlaces-nav a {
-  color: #151d4d;
-  text-decoration: none;
-  font-weight: bolder;
-  background-color: #ffd814;
-  border-radius: 5px;
-  padding: 5px;
+    color: var(--amarillo-pro);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid var(--amarillo-pro);
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin: 5px;
 }
 
-.enlaces-nav li a:hover {
-    background-color: #ff8800;
-}
-.enlaces-nav li:hover {
-    transform: scale(1.2);
-}
-.enlaces-nav li:hover {
-    transition-duration: 500ms;
+.enlaces-nav a:hover {
+    background: var(--amarillo-pro);
+    color: #000;
 }
 
 /* CONTENEDOR */
@@ -65,7 +67,7 @@ body {
 /* MENÚ LATERAL */
 .menu {
   width: 260px;
-  background: #151d4de8;
+  background: #171f36;
   color: #ffd814;
   padding: 10px;
   overflow-y: auto;

@@ -1,4 +1,10 @@
-/* Configuración General */
+:root {
+    --azul-oscuro: #0B132B;
+    --amarillo-pro: #FFC107;
+    --blanco: #ffffff;
+    --gris-claro: #f4f4f4;
+}
+
 body {
     font-family: "Arial", sans-serif;
     line-height: 1.6;
@@ -11,7 +17,7 @@ body {
 
 /* NAVBAR */
 .menu-superior {
-    background: #151d4d;
+    background: var(--azul-oscuro);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -39,27 +45,27 @@ body {
 }
 
 .enlaces-nav a {
-    color: #151d4d;
+    color: var(--amarillo-pro);
     text-decoration: none;
-    font-weight: bolder;
-    background-color: #ffd814;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid var(--amarillo-pro);
+    padding: 8px 16px;
     border-radius: 5px;
-    padding: 8px 15px;
     transition: 0.3s;
-}
-
-.enlaces-nav li:hover {
-    transform: scale(1.1);
+    margin: 5px;
 }
 
 .enlaces-nav a:hover {
-    background-color: #ff8800;
+    background: var(--amarillo-pro);
+    color: #000;
 }
 
 /* PORTADA */
 .portada {
     height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), #151d4d), url("poli.webp");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #151d4d), url("images/poli.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -70,7 +76,7 @@ body {
 }
 
 .contenido-portada h1 {
-    font-size: 3rem;
+    font-size: 100px;
     margin: 0;
 }
 
