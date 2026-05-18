@@ -30,7 +30,7 @@ body {
 }
 
 .nombre-web span {
-  color: #ffd814;
+  color: #FFC107;
 }
 
 .enlaces-nav {
@@ -68,7 +68,7 @@ body {
 .menu {
   width: 260px;
   background: #171f36;
-  color: #ffd814;
+  color: #FFC107;
   padding: 10px;
   overflow-y: auto;
   border-right: 2px solid #151515;
@@ -137,14 +137,17 @@ body {
 /* MODAL */
 .info {
   width: 680px;
-  background: #f4f4f4;
+  background: rgba(11, 19, 43, 0.65);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
   z-index: 4000;
 }
 
@@ -165,6 +168,27 @@ body {
 }
 
 /* ESTADOS */
-.good { color: green; font-weight: bold; }
+.good { color: rgb(7, 223, 7); font-weight: bold; }
 .mid { color: orange; font-weight: bold; }
 .bad { color: red; font-weight: bold; }
+
+#cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.459);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#cerrar:hover {
+  background-color: rgba(255, 0, 0, 0.15);
+  color: #ff0000;
+  transform: scale(1.05);
+}

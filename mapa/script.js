@@ -45,7 +45,7 @@ const datos = {
     texto: "Zona cultural y de ocio muy activa.",
     conflictiva: false,
     explicacion: "Zona segura con ambiente turístico y local equilibrado.",
-    imagen: "https://thisismed.com/wp-content/uploads/2025/01/museo-picasso-de-barcelona-1.jpg__2560.0x1707.0_q85_subsampling-2-1.jpg"
+    imagen: "https://www.stoketravel.com/wp-content/uploads/2019/02/guide-born-barcelona.jpg"
   },
   barceloneta: {
     titulo: "Barceloneta",
@@ -132,27 +132,30 @@ document.querySelectorAll(".calle").forEach(calle => {
 
     // estado de zona conflictiva
     let claseZona = d.conflictiva ? "bad" : "good";
-    let textoZona = d.conflictiva ? "⚠ Zona conflictiva" : "Zona no conflictiva";
+    let textoZona = d.conflictiva ? "❌ Zona conflictiva" : "✅ Zona no conflictiva";
 
     contenido.innerHTML = `
-      <h2 style="text-align:center; margin-bottom:10px;">
+      <h2 style="text-align:center; margin-bottom:10px; border-radius:10px; color:white;">
         ${d.titulo}
       </h2>
+      <div style="border-radius:10px; padding: 5px; color:white;">
 
-      <p class="${claseEstado}" style="text-align:left; font-weight:bold;">
-        Botón de emergencia: ${d.estado}
-      </p>
+        <p class="${claseEstado}" style="text-align:left; font-weight:bold;">
+          Botón de emergencia: ${d.estado}
+        </p>
 
-      <p class="${claseZona}" style="text-align:left; font-weight:bold;">
-        ${textoZona}
-      </p>
+       <p class="${claseZona}" style="text-align:left; font-weight:bold;">
+          ${textoZona}
+        </p>
 
-      <p><strong>Info:</strong> ${d.texto}</p>
+        <p><strong>Info:</strong> ${d.texto}</p>
 
-      <p><strong>Motivo:</strong> ${d.explicacion}</p>
+        <p><strong>Motivo:</strong> ${d.explicacion}</p>
+
+      </div> 
 
       <div style="text-align:center; margin-top:15px;">
-        <img src="${d.imagen}" style="width:100%; border-radius:12px;">
+        <img src="${d.imagen}" style="width:100%; height: 350px; object-fit: cover; border-radius:12px; border: 4px solid #FFD814;">
       </div>
     `;
 
