@@ -59,7 +59,7 @@ body {
 
 .portada {
     height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.7), var(--azul-oscuro)), url("images/punto.png");
+    background: linear-gradient(rgba(0,0,0,0.7), var(--azul-oscuro)), url("images/static.gif");
     background-size: cover;
     background-position: center;
     display: flex;
