@@ -170,7 +170,7 @@ body {
 /* ESTADOS */
 .good { color: rgb(7, 223, 7); font-weight: bold; }
 .mid { color: orange; font-weight: bold; }
-.bad { color: red; font-weight: bold; }
+.bad { color: rgb(255, 166, 0); font-weight: bold; }
 
 #cerrar {
   position: absolute;
